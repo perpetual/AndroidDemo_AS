@@ -20,7 +20,9 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 	private String[] mTitleArray = null;
 
 	private static final int MSG_CODE_NAVIGATE_TO = 0x100;
-	
+
+	private static final Class<?> INIT_ACTIVITY = ViewDrawActivity.class;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		LogUtil.d(TAG, AndroidDemoUtil.deviceInfo2String());
@@ -28,13 +30,12 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 	}
 	
 	private void navigateTo(boolean isScrollTo) {
-		Class<?> cls = ServiceActivity.class;
 		if (isScrollTo) {
-			int scrollIndex = getDataSource().indexOf(cls.getSimpleName());
+			int scrollIndex = getDataSource().indexOf(INIT_ACTIVITY.getSimpleName());
 			mListAdapter.highLightBackground(scrollIndex);
 			setSelection(scrollIndex);
 		} else {
-			Intent intent = new Intent(this, cls);
+			Intent intent = new Intent(this, INIT_ACTIVITY);
 			startActivity(intent);
 			finish();
 		}

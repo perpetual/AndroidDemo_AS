@@ -20,8 +20,7 @@ import com.example.androiddemo.view.MaskView;
 public class ViewDrawActivity extends DemoSuperActivity {
 
 	private MaskView mClipView = null;
-    private View mClipViewParent = null;
-	
+
 	@Override
 	public void initView() {
 		super.initView();
@@ -29,14 +28,13 @@ public class ViewDrawActivity extends DemoSuperActivity {
 		mClipView.setImageSaturation(0.5f);
 		mClipView.setImageCenter(true);
 		mClipView.setImageRotation(45 / 2);
-		mClipViewParent.setOnClickListener(this);
+		getCustomView().setOnClickListener(this);
 	}
 	
 	@Override
 	public void bindView() {
 		super.bindView();
 		mClipView = (MaskView) findViewById(R.id.clip_view);
-		mClipViewParent = findViewById(R.id.parent_view);
 	}
 	
 	@Override

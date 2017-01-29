@@ -25,7 +25,6 @@ public abstract class DemoBaseActivity extends Activity implements IUIInitializa
 		initLayout();
 		bindView();
 		initView();
-		refreshView();
 	}
 	
 	@Override
