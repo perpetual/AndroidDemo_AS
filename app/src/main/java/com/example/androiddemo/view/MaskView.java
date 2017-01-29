@@ -140,8 +140,8 @@ public class MaskView extends CustomView {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
+		canvas.save();
 		if (null != mBitmap) {
-			canvas.save();
 			if (mIsBitmapCenter) {
 				mBitmapRect.offsetTo((getWidth() - mBitmap.getWidth()) / 2, (getHeight() - mBitmap.getHeight()) / 2);
 			} else {
@@ -149,7 +149,6 @@ public class MaskView extends CustomView {
 			}
 			canvas.rotate(mBitmapRotation, mBitmapRect.centerX(), mBitmapRect.centerY());
 			canvas.drawBitmap(mBitmap, null, mBitmapRect, mBitmapPaint);
-			canvas.restore();
 		}
 		
 		if (null != mMaskDrawable) {
@@ -161,7 +160,8 @@ public class MaskView extends CustomView {
 				canvas.drawRect(0, 0, mPressMaskBitmap.getWidth(), mPressMaskBitmap.getHeight(), mMaskPaint);
 			}	
 		}
-		
+		canvas.restore();
+		AndroidDemoUtil.sleep(600);
 	}
 	
 	@Override
