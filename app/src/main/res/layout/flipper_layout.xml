@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/show_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/flip_me" />
+
+    <ViewFlipper
+        android:id="@+id/flipper_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="first"
+            android:textColor="#FFFF0000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="second"
+            android:textColor="#FF00FF00"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="third"
+            android:textColor="#FF0000FF"
+            android:textStyle="bold" />
+    </ViewFlipper>
+
+</LinearLayout>

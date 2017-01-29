@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.androiddemo.view.CustomViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    android:orientation="vertical" >
+
+    <com.example.androiddemo.view.CustomViewGroup
+        android:id="@+id/custom_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue" >
+
+        <TextView 
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="2"
+            android:text="xxx"/>
+        <com.example.androiddemo.view.CustomViewGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue" >
+
+            <com.example.androiddemo.view.CustomViewGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue" >
+
+                <com.example.androiddemo.view.CustomViewGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/blue" >
+
+                    <com.example.androiddemo.view.CustomViewGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blue" >
+                    </com.example.androiddemo.view.CustomViewGroup>
+                </com.example.androiddemo.view.CustomViewGroup>
+            </com.example.androiddemo.view.CustomViewGroup>
+        </com.example.androiddemo.view.CustomViewGroup>
+    </com.example.androiddemo.view.CustomViewGroup>
+>
+
+</com.example.androiddemo.view.CustomViewGroup>

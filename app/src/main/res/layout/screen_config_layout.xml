@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:example="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/screen_width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="屏幕物理像素宽度(px)" />
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/screen_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="屏幕物理像素高度(px)" />
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/screen_density"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="逻辑密度因子" />
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/screen_dpi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="以独立像素为单位的屏幕密度" />
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/screen_xdpi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="横向每寸像素/点" />
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/screen_ydpi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="纵向每寸像素/点" />
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/screen_scaled_density"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="字体缩放因子" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/dashed_border" >
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="160dip"
+            android:layout_height="1dip"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="8dip"
+            android:background="@android:color/black" />
+    </LinearLayout>
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/line_pixel_width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="横线宽度" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dashed_border"
+        android:gravity="center"
+        android:text="示例文字"
+        android:textSize="12sp" />
+
+    <com.example.androiddemo.view.LabelTextView
+        android:id="@+id/text_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        example:label="字体大小" />
+
+</LinearLayout>

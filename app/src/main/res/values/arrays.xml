@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="demo_list">
+        <item>BlankActivity</item>
+        <item>TabBarActivity</item>
+        <item>FlipperActivity</item>
+        <item>DemoListActivity</item>
+        <item>RotatableActivity</item>
+        <item>ListViewActivity</item>
+        <item>SurfaceViewActivity</item>
+        <item>AnimationActivity</item>
+        <item>AlarmManagerActivity</item>
+        <item>ServiceActivity</item>
+        <item>HandlerActivity</item>
+        <item>SecondActivity</item>
+        <item>TestActivity</item>
+        <item>TextViewActivity</item>
+        <item>ScrollViewActivity</item>
+        <item>TouchEventActivity</item>
+        <item>ResourceActivity</item>
+        <item>IntentActivity</item>
+        <item>ViewStubActivity</item>
+        <item>FragmentActivity</item>
+        <item>HelloJniActivity</item>
+        <item>StorageActivity</item>
+        <item>ScreenConfigActivity</item>
+        <item>ViewDrawActivity</item>
+        <item>DebugActivity</item>
+        <item>MediaActivity</item>
+        <item>SensorListActivity</item>
+        <item>VibratorActivity</item>
+        <item>JumpToActivity</item>
+        <item>ContentProviderActivity</item>
+        <item>PhoneBookSDKTestActivity</item>
+        <item>WindowActivity</item>
+    </string-array>
+
+    <string-array name="media_spinner_list">
+        <item>闹铃音</item>
+        <item>照片</item>
+        <item>下载</item>
+        <item>电影</item>
+        <item>音乐</item>
+        <item>通知音</item>
+        <item>图片</item>
+        <item>播客音</item>
+        <item>铃声音</item>
+    </string-array>
+    
+    <string-array name="test_tabs">
+        <item>tab0</item>
+        <item>tab1</item>
+    </string-array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.example.androiddemo.TouchView
+        android:id="@+id/touch_view_large"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff0000"
+        android:gravity="center"
+        android:tag="LARGE" >
+
+        <com.example.androiddemo.TouchView
+            android:id="@+id/touch_view_middle"
+            android:layout_width="300dip"
+            android:layout_height="300dip"
+            android:background="#ff00ff00"
+            android:gravity="center"
+            android:tag="MIDDLE" >
+
+            <com.example.androiddemo.TouchView
+                android:id="@+id/touch_view_small2"
+                android:layout_width="50dip"
+                android:layout_height="100dip"
+                android:background="#ff00ffff"
+                android:clickable="true"
+                android:tag="SMALL2" >
+            </com.example.androiddemo.TouchView>
+
+            <com.example.androiddemo.TouchView
+                android:id="@+id/touch_view_small1"
+                android:layout_width="100dip"
+                android:layout_height="50dip"
+                android:background="#ff0000ff"
+                android:clickable="true"
+                android:tag="SMALL1" >
+            </com.example.androiddemo.TouchView>
+        </com.example.androiddemo.TouchView>
+    </com.example.androiddemo.TouchView>
+
+</LinearLayout>

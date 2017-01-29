@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:clipChildren="true"
+    android:fitsSystemWindows="false"
+    android:layoutDirection="rtl"
+    android:isScrollContainer="true">
+    
+    <LinearLayout 
+        android:id="@+id/btn_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        	<Button 
+	            android:id="@+id/btn1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/test"
+	            android:soundEffectsEnabled="false"/>
+        	
+        	<ImageView
+        	    android:id="@+id/image_view"
+        	    android:layout_width="200dip"
+        	    android:layout_height="100dip"
+        	    android:background="#7fff0000"
+        	    android:contentDescription="@string/test"/>
+        </LinearLayout>
+        
+        <TextView 
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:text="@string/test2"
+            android:background="#8800ff00"
+            android:textDirection="firstStrong"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="100dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="@string/test"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:visibility="visible"
+            android:textAlignment="viewEnd"
+            android:drawableRight="@drawable/star"
+            />
+        
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="@string/test"
+            android:scrollbars="vertical"
+            android:singleLine="true"
+            android:visibility="visible"
+            android:textDirection="rtl"
+            android:duplicateParentState="true"
+            />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"
+        android:background="#ffff0000">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/test"
+            android:nextFocusDown="@id/list_view"
+            android:singleLine="true"
+            android:duplicateParentState="false"
+            />
+	</LinearLayout>
+	
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:alpha="255"
+            android:contentDescription="@string/test"
+            android:drawingCacheQuality="auto"
+            android:onClick="clickTest"
+            />
+
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_view1"
+                android:layout_width="320dip"
+                android:layout_height="320dip"
+                android:alpha="0.1"
+                android:contentDescription="@string/test"
+                android:drawingCacheQuality="auto"
+                android:src="@drawable/lines" />
+
+            <ImageView
+                android:id="@+id/image_view2"
+                android:layout_width="320dip"
+                android:layout_height="320dip"
+                android:alpha="0.5"
+                android:contentDescription="@string/test"
+                android:drawingCacheQuality="low"
+                android:src="@drawable/lines" />
+
+            <ImageView
+                android:id="@+id/image_view3"
+                android:layout_width="320dip"
+                android:layout_height="320dip"
+                android:alpha="0"
+                android:contentDescription="@string/test"
+                android:drawingCacheQuality="high"
+                android:src="@drawable/lines" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#ff000000"/>
+	<ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="20dip"
+        android:layout_marginStart="10dip"
+        android:layout_marginEnd="10dip"
+        android:textFilterEnabled="true"
+		android:transcriptMode="disabled"
+		android:cacheColorHint="#8800ff00"
+		android:scrollingCache="true"
+        android:fastScrollEnabled="false"
+        android:smoothScrollbar="false"
+        android:choiceMode="multipleChoice"
+        android:fastScrollAlwaysVisible="false"
+        android:animateLayoutChanges="false"
+        android:clipChildren="true"
+        android:clipToPadding="false"
+        android:layoutAnimation="@null"
+        android:animationCache="true"
+        android:alwaysDrawnWithCache="false"
+        android:addStatesFromChildren="true"
+        android:descendantFocusability="blocksDescendants"
+        android:splitMotionEvents="true"
+        android:layoutMode="clipBounds"
+        android:tag="xxx"
+        android:scrollX="0dip"
+        android:scrollY="0dip"
+        android:background="#7f00007f"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="visible"
+        android:fitsSystemWindows="false"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:isScrollContainer="true"
+        android:fadeScrollbars="false"
+        android:scrollbarFadeDuration="500"
+        android:scrollbarDefaultDelayBeforeFade="500"
+        android:scrollbarSize="100dip"
+        android:scrollbarThumbHorizontal="@drawable/thumb"
+        android:scrollbarThumbVertical="@drawable/thumb"
+        android:scrollbarTrackHorizontal="@drawable/track"
+        android:scrollbarTrackVertical="@drawable/track"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:fadingEdge="vertical"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdgeLength="10dip"
+        android:nextFocusLeft="@null"
+        android:nextFocusRight="@null"
+        android:nextFocusUp="@null"
+        android:nextFocusDown="@id/edit_text"
+        android:nextFocusForward="@null"
+        android:clickable="false"
+        android:longClickable="false"
+        android:saveEnabled="false"
+        android:filterTouchesWhenObscured="true"
+        android:drawingCacheQuality="auto"
+        android:keepScreenOn="false"
+        android:duplicateParentState="true"
+        android:minHeight="200dip"
+        android:minWidth="200dip"
+        android:soundEffectsEnabled="false"
+        android:hapticFeedbackEnabled="true"
+        android:contentDescription="@string/test"
+        android:overScrollMode="ifContentScrolls"
+        android:alpha="1"
+        android:translationX="0dip"
+        android:translationY="0dip"
+        android:transformPivotX="0dip"
+        android:transformPivotY="0dip"
+        android:rotation="0"
+        android:rotationX="0"
+        android:rotationY="0"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:layerType="none"
+        android:layoutDirection="ltr"
+        android:textDirection="rtl"
+        android:textAlignment="center"
+        android:importantForAccessibility="yes"
+        android:entries="@array/demo_list"
+        android:divider="#ff880000"
+        android:dividerHeight="5dip"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="true"
+        android:overScrollHeader="#ff00f000"
+        android:overScrollFooter="#ff0000ff"
+        android:listSelector="#ff0000ff"
+        android:drawSelectorOnTop="false"
+        android:stackFromBottom="false"
+        
+        />
+
+</LinearLayout>
