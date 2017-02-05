@@ -60,11 +60,13 @@ public class ViewDrawActivity extends DemoSuperActivity {
 	@Override
 	protected void doLeftButtonClick() {
 		mClipView.setImageAlpha(0.5f);
+		mClipView.setClip(true);
 	}
 	
 	@Override
 	protected void doRightButtonClick() {
 		mClipView.setImageAlpha(1.f);
+		mClipView.setClip(false);
 	}
 	
 	@Override
