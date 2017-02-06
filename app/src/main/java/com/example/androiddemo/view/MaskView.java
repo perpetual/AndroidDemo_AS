@@ -13,6 +13,7 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.StateSet;
 import android.view.View;
 
@@ -124,7 +125,7 @@ public class MaskView extends CustomView {
 	@Override
 	public void initView() {
 		super.initView();
-		setBackgroundResource(android.R.color.holo_green_light);
+//		setBackgroundResource(android.R.color.holo_green_light);
 		setClickable(true);
 	}
 	
@@ -187,6 +188,17 @@ public class MaskView extends CustomView {
 		super.drawableStateChanged();
 		LogUtil.d(TAG, Arrays.toString(getDrawableState()), Arrays.toString(PRESSED_STATE));
 		invalidate();
+	}
+
+	@Override
+	protected boolean onSetAlpha(int alpha) {
+		return super.onSetAlpha(alpha);
+	}
+
+	@Override
+	public boolean hasOverlappingRendering() {
+		LogUtil.d(TAG, "hasOverlappingRendering", super.hasOverlappingRendering());
+		return super.hasOverlappingRendering();
 	}
 }
 

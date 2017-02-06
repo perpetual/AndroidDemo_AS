@@ -3,6 +3,7 @@ package com.example.androiddemo.activity;
 import android.view.View;
 
 import com.example.androiddemo.R;
+import com.example.androiddemo.utils.LogUtil;
 import com.example.androiddemo.view.MaskView;
 
 /**
@@ -59,13 +60,24 @@ public class ViewDrawActivity extends DemoSuperActivity {
 	
 	@Override
 	protected void doLeftButtonClick() {
-		mClipView.setImageAlpha(0.5f);
 		mClipView.setClip(true);
+		mClipView.setLayerType(View.LAYER_TYPE_NONE, null);
+		long start = System.currentTimeMillis();
+		for (int i = 0; i < 10000; ++i) {
+			mClipView.setAlpha(0.5f);
+			mClipView.invalidate();
+		}
+		mClipView.setLayerType(View.LAYER_TYPE_NONE, null);
+		LogUtil.d(TAG, "doLeftButtonClick", System.currentTimeMillis() - start);
+//		mClipView.setImageAlpha(0.5f);
 	}
 	
 	@Override
 	protected void doRightButtonClick() {
-		mClipView.setImageAlpha(1.f);
+		mClipView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+		mClipView.setAlpha(1.f);
+		mClipView.setLayerType(View.LAYER_TYPE_NONE, null);
+//		mClipView.setImageAlpha(1.f);
 		mClipView.setClip(false);
 	}
 	
