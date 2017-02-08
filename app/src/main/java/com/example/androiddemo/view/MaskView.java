@@ -125,7 +125,6 @@ public class MaskView extends CustomView {
 	@Override
 	public void initView() {
 		super.initView();
-//		setBackgroundResource(android.R.color.holo_green_light);
 		setClickable(true);
 	}
 	

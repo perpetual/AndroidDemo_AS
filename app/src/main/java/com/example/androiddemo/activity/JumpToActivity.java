@@ -25,7 +25,12 @@ public class JumpToActivity extends DemoSuperActivity {
 	protected String getLeftButtonText() {
 		return "Scheme Jump";
 	}
-	
+
+	@Override
+	protected String getRightButtonText() {
+		return "打开浏览器";
+	}
+
 	@Override
 	protected void doLeftButtonClick() {
 		Intent intent = new Intent();
@@ -33,7 +38,15 @@ public class JumpToActivity extends DemoSuperActivity {
 				.parse("pbscheme://specialvoip@qq.com?phonenumber=*105*"));
 		startActivity(intent);
 	}
-	
+
+	@Override
+	protected void doRightButtonClick() {
+		Intent intent = new Intent(Intent.ACTION_VIEW);
+		String url = "http://www.baidu.com";
+		intent.setData(Uri.parse(url));
+		startActivity(intent);
+	}
+
 	protected void doTopButtonClick() {
 		Intent intent = new Intent();
 		intent.setAction("com.tencent.pb.voip.mail");

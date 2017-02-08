@@ -10,6 +10,7 @@
         android:layout_width="200dip"
         android:duplicateParentState="false"
         android:scaleType="center"
-        android:layout_height="200dip" />
+        android:layout_height="200dip"
+        android:background="@android:color/holo_green_light"/>
 
 </LinearLayout>
