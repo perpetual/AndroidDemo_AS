@@ -34,6 +34,7 @@
         <item>ContentProviderActivity</item>
         <item>PhoneBookSDKTestActivity</item>
         <item>WindowActivity</item>
+        <item>ClipViewActivity</item>
     </string-array>
 
     <string-array name="media_spinner_list">

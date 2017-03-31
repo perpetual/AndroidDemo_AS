@@ -2,12 +2,15 @@ package com.example.androiddemo.activity;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ListView;
@@ -21,7 +24,7 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 
 	private static final int MSG_CODE_NAVIGATE_TO = 0x100;
 
-	private static final Class<?> INIT_ACTIVITY = ViewDrawActivity.class;
+	private static final Class<?> INIT_ACTIVITY = ClipViewActivity.class;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,19 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 			finish();
 		}
 	}
-	
+
+	private void testEntry() {
+		LogUtil.d(TAG, "testEntry");
+		Pattern pattern = Pattern.compile("(\\d+)");
+		Matcher m = pattern.matcher("r3fweif12321321fff5436462fwefeeff324");
+		while (m.find()) {
+			int groupCount = m.groupCount();
+			for (int i = 0; i < groupCount; ++i) {
+				LogUtil.d(TAG, "testEntry", m.group(i));
+			}
+		}
+	}
+
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
@@ -78,6 +93,7 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 	public void initData(Context context, AttributeSet attrs) {
 		super.initData(context, attrs);
 		mTitleArray = getResources().getStringArray(R.array.demo_list);
+		testEntry();
 	}
 
 	@Override

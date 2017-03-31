@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:clipChildren="false"
+                android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_centerInParent="true"
+        android:clipChildren="false">
+
+        <View
+            android:layout_width="150dip"
+            android:layout_height="50dip"
+            android:layout_marginLeft="-25dip"
+            android:background="@color/red"/>
+    </FrameLayout>
+
+</RelativeLayout>
