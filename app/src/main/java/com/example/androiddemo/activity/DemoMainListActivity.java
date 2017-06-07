@@ -1,14 +1,18 @@
 package com.example.androiddemo.activity;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Menu;
@@ -24,7 +28,7 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 
 	private static final int MSG_CODE_NAVIGATE_TO = 0x100;
 
-	private static final Class<?> INIT_ACTIVITY = ClipViewActivity.class;
+	private static final Class<?> INIT_ACTIVITY = TestActivity.class;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +48,34 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 		}
 	}
 
-	private void testEntry() {
-		LogUtil.d(TAG, "testEntry");
-		Pattern pattern = Pattern.compile("(\\d+)");
-		Matcher m = pattern.matcher("r3fweif12321321fff5436462fwefeeff324");
-		while (m.find()) {
-			int groupCount = m.groupCount();
-			for (int i = 0; i < groupCount; ++i) {
-				LogUtil.d(TAG, "testEntry", m.group(i));
-			}
+	private class DataItem implements Comparable {
+		public int mData;
+
+		public DataItem(int data) {
+			mData = data;
 		}
+
+		@Override
+		public String toString() {
+			return String.valueOf(mData);
+		}
+
+		@Override
+		public int compareTo(@NonNull Object o) {
+			return mData < ((DataItem)o).mData ? -1 : 1;
+		}
+
+	}
+	private void testEntry() {
+		List<DataItem> list = new ArrayList<>();
+		Integer[] array =
+				{0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+						0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 2, 1, 0, 0, 0, 2, 30, 0, 3};
+		for (int i = 0; i < array.length; ++i) {
+			list.add(new DataItem(array[i]));
+		}
+		Collections.sort(list);
+		Log.d(TAG, "testEntry" + list + Build.VERSION.SDK + Build.VERSION.SDK_INT);
 	}
 
 	@Override
