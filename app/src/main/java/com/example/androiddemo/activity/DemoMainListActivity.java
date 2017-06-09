@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import com.example.androiddemo.R;
+import com.example.androiddemo.SynchronizeDemo;
 import com.example.androiddemo.utils.AndroidDemoUtil;
 import com.example.androiddemo.utils.LogUtil;
 
@@ -66,7 +67,12 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 		}
 
 	}
+
 	private void testEntry() {
+		testEntry2();
+	}
+
+	private void testEntry1() {
 		List<DataItem> list = new ArrayList<>();
 		Integer[] array =
 				{0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -76,6 +82,16 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 		}
 		Collections.sort(list);
 		Log.d(TAG, "testEntry" + list + Build.VERSION.SDK + Build.VERSION.SDK_INT);
+	}
+
+	private void testEntry2() {
+		SynchronizeDemo.sObject1 = new Object();
+		SynchronizeDemo.sObject2 = new Object();
+		SynchronizeDemo demo = new SynchronizeDemo();
+		new Thread(demo, "1_1").start();
+		new Thread(demo, "2_1").start();
+		new Thread(new SynchronizeDemo(), "3_2").start();
+//		new Thread(new SynchronizeDemo(4), "4_0").start();
 	}
 
 	@Override

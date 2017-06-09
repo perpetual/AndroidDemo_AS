@@ -485,6 +485,8 @@ public class AndroidDemoUtil {
 					} else {
 						buffer.append(item.toString());
 					}
+				} else {
+					buffer.append('|').append("null");
 				}
 			}
 			return buffer.toString();

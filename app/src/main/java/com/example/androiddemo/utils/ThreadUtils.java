@@ -45,6 +45,12 @@ public class ThreadUtils {
 		AsyncTask.execute(con);
 	}
 
+	public static void sleep(long milli) {
+		try {
+			Thread.sleep(milli);
+		} catch (Exception e) {
 
+		}
+	}
 
 }
