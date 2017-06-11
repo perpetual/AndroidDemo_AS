@@ -85,13 +85,13 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 	}
 
 	private void testEntry2() {
-		SynchronizeDemo.sObject1 = new Object();
-		SynchronizeDemo.sObject2 = new Object();
-		SynchronizeDemo demo = new SynchronizeDemo();
-		new Thread(demo, "1_1").start();
-		new Thread(demo, "2_1").start();
-		new Thread(new SynchronizeDemo(), "3_2").start();
-//		new Thread(new SynchronizeDemo(4), "4_0").start();
+		String lock1 = "lock1";
+		String lock2 = "lock2";
+		String lock3 = "lock3";
+		new Thread(new SynchronizeDemo(lock1), "Thread1").start();
+		new Thread(new SynchronizeDemo(lock1), "Thread2").start();
+		new Thread(new SynchronizeDemo(lock3), "Thread3").start();
+//		new Thread(new SynchronizeDemo(null), "Thread4").start();
 	}
 
 	@Override
