@@ -29,7 +29,7 @@ public class DemoMainListActivity extends SuperListActivity<String> {
 
 	private static final int MSG_CODE_NAVIGATE_TO = 0x100;
 
-	private static final Class<?> INIT_ACTIVITY = TestActivity.class;
+	private static final Class<?> INIT_ACTIVITY = SystemInfoActivity.class;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
