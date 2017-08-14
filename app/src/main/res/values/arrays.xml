@@ -36,6 +36,7 @@
         <item>WindowActivity</item>
         <item>ClipViewActivity</item>
         <item>SystemInfoActivity</item>
+        <item>ScrollDrawTestActivity</item>
     </string-array>
 
     <string-array name="media_spinner_list">

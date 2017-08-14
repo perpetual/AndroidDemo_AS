@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#FFFF00">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="#FF0000">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="#FFFF00">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="37dip"
+                    android:background="#FF0000">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="34dip"
+                        android:background="#FFFF00">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="31dip"
+                            android:background="#FF0000">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="28dip"
+                                android:background="#FFFF00">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="25dip"
+                                    android:background="#FF0000">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="22dip"
+                                        android:background="#FFFF00">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="19dip"
+                                            android:background="#FF0000">
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="16dip"
+                                                android:background="#FFFF00">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="13dip"
+                                                    android:background="#FF0000">
+
+                                                    <RelativeLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="10dip"
+                                                        android:background="#FFFF00">
+
+                                                        <RelativeLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="7dip"
+                                                            android:background="#FF0000">
+
+                                                            <RelativeLayout
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="4dip"
+                                                                android:background="#FFFF00">
+
+                                                            </RelativeLayout>
+                                                        </RelativeLayout>
+                                                    </RelativeLayout>
+                                                </RelativeLayout>
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

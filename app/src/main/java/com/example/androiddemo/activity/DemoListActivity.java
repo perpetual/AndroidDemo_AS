@@ -1,9 +1,5 @@
 package com.example.androiddemo.activity;
 
-import com.example.androiddemo.R;
-import com.example.androiddemo.R.id;
-import com.example.androiddemo.R.layout;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,9 +10,12 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.androiddemo.R;
 
 public class DemoListActivity extends Activity implements OnClickListener{
 	
@@ -28,7 +27,7 @@ public class DemoListActivity extends Activity implements OnClickListener{
 
 	private Button mTextBtn = null;
 	private ListView mListView = null;
-	private BaseAdapter mAdapter = null;
+	private ListAdapter mAdapter = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,40 +46,7 @@ public class DemoListActivity extends Activity implements OnClickListener{
 	 * ˽�й�����
 	 */
 	private void initData() {
-		mAdapter = new BaseAdapter() {
-			
-			@Override
-			public View getView(int position, View convertView, ViewGroup parent) {
-				View view = convertView;
-				DataHolder dataHolder = null;
-				
-				if (null == view) {
-					view = LayoutInflater.from(DemoListActivity.this).inflate(R.layout.main_list_item, null);
-					dataHolder = new DataHolder();
-					dataHolder.mTextView = (TextView)view.findViewById(R.id.title1);
-					view.setTag(dataHolder);
-				} else {
-					dataHolder = (DataHolder)view.getTag();
-				}
-				dataHolder.mTextView.setText(String.valueOf(position));
-				return view;
-			}
-			
-			@Override
-			public long getItemId(int position) {
-				return 0;
-			}
-			
-			@Override
-			public Object getItem(int position) {
-				return null;
-			}
-			
-			@Override
-			public int getCount() {
-				return ITEM_COUNT;
-			}
-		};
+		mAdapter = initAdapter();
 	}
 	
 	private void bindUI() {
@@ -98,5 +64,47 @@ public class DemoListActivity extends Activity implements OnClickListener{
 				return true;
 			}
 		});
+	}
+
+	protected ListAdapter initAdapter() {
+		mAdapter = new BaseAdapter() {
+
+			@Override
+			public View getView(int position, View convertView, ViewGroup parent) {
+				View view = convertView;
+				DataHolder dataHolder = null;
+
+				if (null == view) {
+					view = LayoutInflater.from(DemoListActivity.this).inflate(R.layout.main_list_item, null);
+					dataHolder = new DataHolder();
+					dataHolder.mTextView = (TextView)view.findViewById(R.id.title1);
+					view.setTag(dataHolder);
+				} else {
+					dataHolder = (DataHolder)view.getTag();
+				}
+				dataHolder.mTextView.setText(String.valueOf(position));
+				return view;
+			}
+
+			@Override
+			public long getItemId(int position) {
+				return 0;
+			}
+
+			@Override
+			public Object getItem(int position) {
+				return null;
+			}
+
+			@Override
+			public int getCount() {
+				return ITEM_COUNT;
+			}
+		};
+		return mAdapter;
+	}
+
+	protected ListAdapter getAdapter() {
+		return mListView.getAdapter();
 	}
 }

@@ -1,12 +1,5 @@
 package com.example.androiddemo.activity;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -24,12 +17,17 @@ import com.example.androiddemo.SynchronizeDemo;
 import com.example.androiddemo.utils.AndroidDemoUtil;
 import com.example.androiddemo.utils.LogUtil;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class DemoMainListActivity extends SuperListActivity<String> {	
 	private String[] mTitleArray = null;
 
 	private static final int MSG_CODE_NAVIGATE_TO = 0x100;
 
-	private static final Class<?> INIT_ACTIVITY = SystemInfoActivity.class;
+	private static final Class<?> INIT_ACTIVITY = ScrollDrawTestActivity.class;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

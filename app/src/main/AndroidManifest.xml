@@ -114,6 +114,7 @@
         <activity android:name="com.example.androiddemo.activity.WindowActivity" />
         <activity android:name="com.example.androiddemo.activity.ClipViewActivity" />
         <activity android:name="com.example.androiddemo.activity.SystemInfoActivity" />
+        <activity android:name="com.example.androiddemo.activity.ScrollDrawTestActivity" />
 
         <receiver android:name="com.example.androiddemo.BluetoothReceiver" >
             <intent-filter android:priority="2147483647" >
