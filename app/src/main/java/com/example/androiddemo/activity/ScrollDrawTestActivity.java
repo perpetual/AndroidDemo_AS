@@ -19,7 +19,9 @@ import java.util.Random;
 
 public class ScrollDrawTestActivity extends DemoListActivity {
 
-    Random mRandom = new Random(System.currentTimeMillis());
+    private Random mRandom = new Random(System.currentTimeMillis());
+    private float mTotal;
+    private int mCount;
 
     @Override
     protected ListAdapter initAdapter() {
@@ -43,9 +45,12 @@ public class ScrollDrawTestActivity extends DemoListActivity {
             public View getView(int position, View convertView, ViewGroup parent) {
                 View ret = convertView;
                 long start = System.currentTimeMillis();
-                if (null == convertView) {
+                if (null == convertView || true) {
                     ret = new ComplexLayout(ScrollDrawTestActivity.this);
-                    Log.d("xxx", "getView1:" + (System.currentTimeMillis() - start));
+                    long diff = System.currentTimeMillis() - start;
+                    mTotal += diff;
+                    ++mCount;
+                    Log.d("xxx", "getView1:" + mTotal / mCount);
                 } else {
                     ViewGroup.LayoutParams lp = ret.getLayoutParams();
                     lp.width = 300 + (100 * (mRandom.nextInt(100) % 3));
@@ -64,4 +69,16 @@ class ComplexLayout extends RelativeLayout {
         super(context);
         LayoutInflater.from(context).inflate(R.layout.complex_layout, this);
     }
+
+    private static void setBackground(View view, int resId) {
+        view.setBackgroundResource(resId);
+        if (view instanceof ViewGroup) {
+            ViewGroup vg = (ViewGroup) view;
+            int count = vg.getChildCount();
+            for (int i = 0; i < count; ++i) {
+                setBackground(vg.getChildAt(i), resId);
+            }
+        }
+    }
+
 }
